@@ -1,0 +1,67 @@
+<html>
+  <head><title>{% block title %}{% endblock %}URL Shorter & Bookmarking</title>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+    <style>
+      body
+      {
+      margin-top:58px;
+      margin-left: 15px;
+      margin-right: 15px;
+      font-family: 'Droid Sans', sans-serif;
+      font-size: 12pt;
+      }
+      .menuBar
+      {
+      width:100%;
+      height:50px;
+      display:block;
+      position:absolute;
+      top:0;
+      left:0;
+      background: #ccc;
+      }
+      .nav
+      {
+      float:left;
+      margin-right:10px;
+      }
+      .nav ul li
+      {
+      list-style:none;
+      float:left;
+      margin-left: 5px;
+      margin-right: 5px;
+      }
+      .logo
+      {
+      float:left;
+      margin-top: 16px;
+      margin-left: 5px;
+      }
+      .button
+      {
+      margin-top: 4px;
+      margin-bottom: 4px;
+      padding:3px;
+      border: 1px solid #ccc;
+      background: #cdc;
+      }
+      .button:hover
+      {
+      padding:3px;
+      border: 1px solid black;
+      background: #cdc;
+      border: 1px solid black;
+      }
+
+  </style>
+  </head>
+  <body>
+    <div class="menuBar"><div class="logo">URL Shortener / Bookmarker</div><div class="nav"><ul><li><a href="/">Add New</a></li><li><a href="/details/">All URLs</a></li><li><a href="/tags/">Tag Cloud</a></li>{% block menuitems %}{% endblock %}</ul></div></div>
+    {% if message is defined %}
+    <p>{{message}}</p>
+    {% endif %}
+    {% block body %}
+    {% endblock %}
+  </body>
+</html>

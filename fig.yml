@@ -1,0 +1,14 @@
+
+service:
+  build: ./service
+  working_dir: /deploy
+  command: /deploy/fig_start.sh
+  links:
+    - database
+  ports:
+    - "80:80"
+
+database:
+  build: ./database
+  expose:
+    - "5432"

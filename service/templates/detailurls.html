@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block body %}
+<h1>URL Details</h1>
+<table>
+  {% for url in urls %}
+  <tr><td><a href="{{ url[-1] }}">{{ url[-1] }}</a></td><td><a href="{{ url[1] }}">{{ url[1]}}</a></td><td>{{ url[2] }}</td><td>{{ url[3]|isotime }}</td><td>{% for tag in url[4] %}<a href="/tags/{{ tag }}">{{ tag }}</a> {% endfor %}</td></tr>
+{% endfor %}
+</table>
+{% endblock %}

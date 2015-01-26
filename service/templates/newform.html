@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="form">
+<form method="put" action="new">
+  URL:<br> <input type="text" name="url" size="64" /><br>
+  Tags (comma separated):<br>
+  <input type="text" name="tags" size="64"/><br>
+
+  <button type="submit" class="button">Bookmark & Shorten</button>
+</form>
+</div>
+{% endblock %}

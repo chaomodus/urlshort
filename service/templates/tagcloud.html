@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block body %}
+<h1>Tag Cloud</h1>
+{% for tag in tags %}
+<a href="/tags/{{ tag[0] }}" style="font-size: {{ (tag[1] / maxcount) * 2.0 }}em">{{ tag[0] }}</a>
+{% endfor %}
+{% endblock %}
