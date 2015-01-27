@@ -6,9 +6,11 @@ service:
   links:
     - database
   ports:
-    - "80:80"
+    - "80:8080"
 
 database:
   build: ./database
+  environment:
+    POSTGRES_PASSWORD: postgres
   expose:
     - "5432"

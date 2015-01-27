@@ -138,6 +138,7 @@ if __name__ == '__main__':
             config.read(conf)
 
     cherrypy.config.update({'server.socket_port':config.getint('global','socketport')})
+    cherrypy.config.update({'server.socket_host':config.get('global','sockethost')})
     cherrypy.config.update({'environment':config.get('global','environment')})
 
     jinjaenv = jinja2.Environment(loader=jinja2.FileSystemLoader('./templates'))
