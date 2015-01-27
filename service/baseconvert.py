@@ -1,3 +1,7 @@
+#
+# baseconvert - convert between numerical bases with arbirtary alphabets.
+# adapted by Cas Rusnov <rusnovn@gmail.com>
+#
 
 BASE36 = "0123456789abcdefghijklmnopqrstuvwxyz"
 BASE64 = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
@@ -16,7 +20,6 @@ def base64encode(num):
 
 def base64decode(num):
     return baseN_decode(num, BASE64)
-
 
 def baseN_encode(num, alphabet=BASE64):
     """Encode a number in Base X
